@@ -1,6 +1,6 @@
 .header-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
     text-align: center;
     flex-direction: column;
 }
@@ -14,10 +14,13 @@
     padding-right: 20px;
     border-left: 1px solid gray;
     border-right: 1px solid gray;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .title {
     color: gray;
+    margin-bottom: 1em;
 }
 
 h1 {
@@ -28,6 +31,12 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     margin-top: 1em;
+    width: 75%;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: lightgreen;
 }
 
 article {
@@ -37,4 +46,21 @@ article {
 
 a {
     color: green;
+}
+
+.actions {
+    margin-bottom: 2em;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
 }

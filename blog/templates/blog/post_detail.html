@@ -3,6 +3,17 @@
 {% block content %}
     <article class="post">
 
+        {% if user.is_authenticated %}
+        <aside class="actions">
+            <div class="new">
+                <span>Edit Post: </span> 
+                <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
+                  {% include './icons/pencil-fill.svg' %}
+                </a>
+            </div>
+        </aside>
+        {% endif %}
+
         {% if post.published_date %}
             <time class="date">
                 {{ post.published_date }}
@@ -11,7 +22,6 @@
 
         <h2 class="title">{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
-        <p>Created: {{ post.created_date }}</p>
 
     </article>
 {% endblock %}
